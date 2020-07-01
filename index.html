@@ -153,8 +153,18 @@
     </script>
   </head>
   <body>
+    
+    
+    <div class="container">
+      <div class="jumbotron" id="intro">
+        <h1> Hello buddy</h1>
+    <a type="button" class="btn btn-success" href="#" id="start-me-up">Click me</a>
+      </div>
+
+    </div>
+
     <div
-      class="card"
+      class="card d-none"
       style="width: 25rem; text-align: center; margin: 0 auto;"
       id="random_serie"
     >
@@ -178,6 +188,8 @@
       button_newSerie.addEventListener("click", () =>
         refreshSerie(getRandomSerie(serieTv))
       );
+      
     </script>
+    <script type="text/javascript" src="app.js" > </script>
   </body>
 </html>
