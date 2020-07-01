@@ -1,11 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wheel of series</title>
-</head>
-<body>
-    <h1>Wellcome stranger! take a seat and enjoy</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        margin: 2rem;
+      }
+    </style>
+    <title>Wheel of SERIES</title>
+    <script>
+      const serieTv = [];
+
+      // popola serieTv e ri-popola serieTv nel caso si svuotasse
+      const refillSerie = () => {
+        serieTv.push({
+          title: "La casa di carta",
+          original_title: "La casa de papel",
+          desc:
+            'Set in Madrid, a mysterious man known as "The Professor" recruits a group of eight people, who choose cities for code-names, to carry out an ambitious plan that involves entering the Royal Mint of Spain, and escaping with €2.4 billion. After taking 67 people hostage inside the Mint, the team plans to remain inside for 11 days to print the money as they deal with elite police forces. In the events succeeding the initial heist, the group are forced out of hiding, and find themselves preparing for a second heist, this time on the Bank of Spain, as they again deal with hostages and police forces.',
+          img:
+            "https://www.fashiontimes.it/wp-content/uploads/media/2020/04/Casa-de-Papel-luoghi-della-serie-200x200.jpg",
+          year: 2017,
+          rating: 6,
+        });
+        serieTv.push({
+          title: "Breaking Bad",
+          original_title: "Breaking Bad",
+          desc:
+            "Set in Albuquerque, New Mexico, between 2008 and 2010, Breaking Bad follows Walter White, a meek high school science teacher who transforms into a ruthless player in the local methamphetamine drug trade, driven by a desire to provide for his family after being diagnosed with terminal lung cancer. Initially making only small batches of meth with his former student Jesse Pinkman in a rolling meth lab, Walter and Jesse eventually expand to make larger batches of a special blue meth that is incredibly pure and creates high demand.",
+          img:
+            "https://i.pinimg.com/236x/66/67/7c/66677c2af71d2d202554e4c99469ec47--jesse-pinkman-bryan-cranston.jpg",
+          year: 2014,
+          rating: 8,
+        });
+        serieTv.push({
+          title: "Dexter",
+          original_title: "Dexter",
+          desc: `Orphaned at age three, when his mother was brutally murdered with a chainsaw by drug dealers, Dexter (Hall) was adopted by Miami police officer Harry Morgan (James Remar). Recognizing the boy's trauma and the subsequent development of his sociopathic tendencies, Harry has manipulated Dexter to channel his gruesome bloodlust into vigilantism, killing only heinous criminals who slip through the criminal justice system. To facilitate covering his prolific trail of homicides, Dexter gains employment as a forensic analyst, specializing in blood spatter pattern analysis, for the Miami Metro Police Department.`,
+          img:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDeunXwttWCoZpFtQeyn4uEwM_gw-KYPrODw&usqp=CAU",
+          year: 2010,
+          rating: 7,
+        });
+        serieTv.push({
+          title: "Scrubs",
+          original_title: "Scrubs",
+          desc: `Scrubs is an American medical comedy-drama television series created by Bill Lawrence that aired from October 2, 2001, to March 17, 2010, on NBC and later ABC. The series follows the lives of employees at the fictional Sacred Heart Hospital, which is a teaching hospital. The title is a play on surgical scrubs and a term for a low-ranking person because at the beginning of the series, most of the main characters are medical interns.`,
+          img: "https://s1.dmcdn.net/u/7tC8j1Ui9RPFZjAJc/200x200",
+          year: 2010,
+          rating: 8,
+        });
+        serieTv.push({
+          title: "Peaky Blinders",
+          original_title: "Peaky Blinders",
+          desc: `Peaky Blinders is a British period crime drama television series created by Steven Knight. Set in Birmingham, England, the series follows the exploits of the Shelby crime family in the direct aftermath of the First World War. The fictional family is loosely based on a real 19th century urban youth gang of the same name, who were active in the city from the 1890s to the early twentieth century.`,
+          img:
+            "https://images-eu.ssl-images-amazon.com/images/I/51FUZatfmYL._SX198_BO1,204,203,200_QL40_ML2_.jpg",
+          year: 2013,
+          rating: 9,
+        });
+        serieTv.push({
+          title: "Lost",
+          original_title: "Lost",
+          desc: `Lost is an American drama television series that originally aired on ABC from September 22, 2004, to May 23, 2010, over six seasons, comprising a total of 121 episodes. The show contains elements of supernatural and science fiction, and follows the survivors of a commercial jet airliner flying between Sydney and Los Angeles, after the plane crashes on a mysterious island somewhere in the South Pacific Ocean. The story is told in a heavily serialized manner. Episodes typically feature a primary storyline set on the island, augmented by flashback or flashforward sequences which provide additional insight into the involved characters.`,
+          img:
+            "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0022/1333/brand.gif?itok=q4FswUaN",
+          year: 2002,
+          rating: 8,
+        });
+        serieTv.push({
+          title: "Dark",
+          original_title: "Dark",
+          desc: `Dark is a German science fiction Thriller web television series co-created by Baran bo Odar and Jantje Friese. Set in the fictitious town of Winden, Germany, Dark concerns the aftermath of a child's disappearance which exposes the secrets of, and hidden connections among, four estranged families as they slowly unravel a sinister time travel conspiracy which spans three generations. Throughout the series, Dark explores the existential implications of time and its effects upon human nature.`,
+          img:
+            "https://vignette.wikia.nocookie.net/dark-netflix/images/9/96/Dark_Timeline_Cover.jpg/revision/latest/window-crop/width/200/x-offset/721/y-offset/0/window-width/721/window-height/720?cb=20190420114439",
+          year: 2017,
+          rating: 10,
+        });
+        serieTv.push({
+          title: "Vikings",
+          original_title: "Vikings",
+          desc: `The series is inspired by the tales of the Norsemen of early medieval Scandinavia. It broadly follows the exploits of the legendary Viking chieftain Ragnar Lothbrok and his crew, family and descendants, as notably laid down in the 13th-century sagas Ragnars saga Loðbrókar and Ragnarssona þáttr, as well as in Saxo Grammaticus's 12th-century work Gesta Danorum. Norse legendary sagas were partially fictional tales based in the Norse oral tradition, written down about 200 to 400 years after the events they describe.`,
+          img:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTwbUysyVwG7Ev9dkVsJ0v2VVByMQVPT2zBdw&usqp=CAU",
+          year: 2012,
+          rating: 8,
+        });
+        serieTv.push({
+          title: "The Order",
+          original_title: "The Order",
+          desc: `The Order follows college student Jack Morton as he joins the Hermetic Order of the Blue Rose, a secret society that teaches and practices magic. As Jack goes deeper into the organization's history, he uncovers dark family secrets and an underground battle between werewolves and the magical dark arts.`,
+          img:
+            "https://vignette.wikia.nocookie.net/the-order-netflix/images/a/a6/The_Order_Season_2_Poster.jpg/revision/latest/window-crop/width/200/x-offset/0/y-offset/0/window-width/1081/window-height/1080?cb=20200617011726",
+          year: 2018,
+          rating: 3,
+        });
+        serieTv.push({
+          title: "Death Note",
+          original_title: "Death Note",
+          desc: `In Tokyo, an intelligent yet disaffected high-school student named Light Yagami finds the "Death Note", a mysterious black notebook which can kill anyone as long as the user knows both the target's name and face. After verifying that the notebook works and initially being terrified of its god-like abilities, Light begins to consider the possibilities of the Death Note's abilities and sets out to create a utopian world without crime, killing numerous high-profile Japanese criminals, before eventually targeting international criminals and felons around the world.`,
+          img:
+            "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0016/2048/brand.gif?itok=7pDtMWCy",
+          year: 2006,
+          rating: 10,
+        });
+        serieTv.push({
+          title: "Black Mirror",
+          original_title: "Black Mirror",
+          desc: `Black Mirror is a British dystopian science fiction anthology television series created by Charlie Brooker. He and Annabel Jones are the programme's showrunners. It examines modern society, particularly with regard to the unanticipated consequences of new technologies.`,
+          img:
+            "https://vignette.wikia.nocookie.net/black-mirror/images/9/94/51oUebP7HUL.jpg/revision/latest/window-crop/width/200/x-offset/0/y-offset/0/window-width/329/window-height/329?cb=20180116095219",
+          year: 2011,
+          rating: 7,
+        });
+      };
+
+      // invoca refillSerie() per riempire serieTv al primo arrivo sul sito
+      refillSerie();
+
+      // ottieni nuova serie random e rimuovila dalla pool di serieTv, per non riottenerla fino a svuotamento array
+      const getRandomSerie = (listaSerie) => {
+        // ottieni nuova serie random e salvala in randomSerie, restituisci il suo valore a fine funzione
+        const maxRange = listaSerie.length;
+        const randomNumber = Math.floor(Math.random() * maxRange);
+        const randomSerie = listaSerie[randomNumber];
+
+        // rimuovi la serie trovata da serieTv
+        listaSerie.splice(randomNumber, 1);
+
+        // se serieTv si è svuotato, riempilo nuovamente
+        if (serieTv.length === 0) refillSerie();
+
+        return randomSerie;
+      };
+
+      // refresh contenuti della card
+      const refreshSerie = (serie) => {
+        card.querySelector("#random_serie img").src = serie.img;
+        card.querySelector("#random_serie .card-title").innerText = serie.title;
+        card.querySelector(
+          "#random_serie .card-subtitle"
+        ).innerText = `${serie.year} - Rating: ${serie.rating}`;
+        card.querySelector("#random_serie .card-text").innerText = serie.desc;
+      };
+    </script>
+  </head>
+  <body>
+    <div
+      class="card"
+      style="width: 25rem; text-align: center; margin: 0 auto;"
+      id="random_serie"
+    >
+      <div class="card-body">
+        <img src="" alt="Card thumbnail" />
+        <h5 class="card-title"></h5>
+        <h6 class="card-subtitle mb-2 text-muted"></h6>
+        <p class="card-text"></p>
+        <button type="button" class="btn btn-primary" id="button_newSerie">
+          Nuova Serie TV Random
+        </button>
+      </div>
+    </div>
+    <script>
+      const card = document.querySelector("#random_serie");
+      const button_newSerie = document.querySelector("#button_newSerie");
+
+      // invoca refreshSerie() per mettere all'interno della card una serie al primo arrivo sul sito
+      refreshSerie(getRandomSerie(serieTv));
+
+      button_newSerie.addEventListener("click", () =>
+        refreshSerie(getRandomSerie(serieTv))
+      );
+    </script>
+  </body>
 </html>
